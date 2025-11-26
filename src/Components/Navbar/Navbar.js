@@ -6,7 +6,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import Logo from '../../IMG/Index/Isotipo.png';
 import Burger from '../../IMG/Index/burger.svg';  
 
-import '../Navbar/navBar.css';
+import './navbar.css';
 
 function BasicExample() {
 

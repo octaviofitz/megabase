@@ -70,10 +70,10 @@ function Contacto() {
       }
     });
     emailjs.sendForm(
-      'service_avyk5ff',
-      'template_ayu86b6',
+      'service_avyk5aff',
+      'template_ayu8a6b6',
       e.target,
-      'kGJMjsQGEXz5lmSJ2'
+      'kGJMjsQGEXz5laSJ2'
     )
     .then((response) => {
       console.log('Estado:', response.status);
