@@ -1,5 +1,111 @@
-#footer{
-    background-color: blue;
-    color: white;
-    padding: 3rem 0;
+.footer{
+    margin-bottom: 0;
+   padding: 2.5REM 0.75rem;
+   font-size: 0.9rem;
+   font-weight: 400;
+   background-color: black;
+   opacity: 0.9;
+   text-align: justify;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   font-family: 'IBM Plex Sans", sans-serif';
+}
+
+.footer .logo{
+   width: 15vw;
+   display: flex;
+   margin: auto;
+}
+
+.footer .containerTexto .texto{
+   margin: 0.5rem 0;
+   color: #fff;
+}
+
+.footer .galide .texto{
+   margin-top: 1.25rem;
+   color: #fff;
+   font-weight: 600;
+}
+
+.footer .galide .bold{
+   color: #FF0000;
+   font-weight: 900;
+   text-decoration: none;
+}
+
+.footer .bold:hover{
+   color: white;
+}
+
+@media(min-width: 768px){
+   .footer .logo{
+       width: 10vw;
+   }
+
+   .footer {
+       font-size: 1rem;
+   }
+
+   .footer .containerTexto .texto{
+       margin: 0.7rem;
+   }
+
+   .footer .galide{
+       margin-top: 1.55rem;
+   }
+}
+
+@media (min-width:1024px){
+   .footer{
+       flex-direction: row;
+       justify-content: space-around;
+       border: none;
+       align-items: center;
+       padding: 1rem 0;
+       margin: 0;
+   }
+
+
+   .footer .containerImg{
+       order: 1;
+   }
+
+   .footer .galide{
+       order: 2;
+   }
+
+   .footer .logo{
+       width: 8vw;
+       margin-left: -5vw;
+
+   }
+
+   .footer .containerTexto{
+       padding: 0;
+       margin: 0;
+   }
+
+   .footer .containerTexto .texto{
+       padding: 0rem;
+       font-size: 1rem;
+       margin: 0;
+   }
+
+   .footer .galide{
+       margin: 0;
+       padding: 0;
+   }
+
+}
+
+@media (min-width: 1440px){
+   .footer{
+       padding: 4vh 0;
+   }
+
+   .footer .logo{
+    width: 6vw;
+   }
 }

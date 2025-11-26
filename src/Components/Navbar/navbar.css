@@ -1,0 +1,135 @@
+.navBar {
+  padding: 8px 3px 10px;
+  background-color: black !important;
+}
+
+.navBar .logo {
+  height: 5vh !important;
+}
+
+.navbar-toggler-icon {
+  background-image: url('../../IMG/Index/burger.svg') !important;
+  color: yellow;
+}
+
+.navBar .link {
+  color: #FF0000;
+  text-align: center;
+  padding: 10px;
+  font-family: "IBM Plex Sans", sans-serif;
+  text-transform: uppercase;
+
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+}
+
+/* Subrayado blanco oculto por defecto */
+.navBar .link::after {
+  content: "";
+  position: absolute;
+  left: 15%;
+  right: 0;
+  height: 3px;
+  width: 70%;
+  background: white;
+  bottom: -1.5px;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform .2s ease;
+}
+
+/* Hover: el texto sigue rojo y aparece la línea */
+.navBar .link:hover {
+  color: #FF0000 !important;
+}
+
+.navBar .link:hover::after,
+.navBar .link:focus-visible::after {
+  transform: scaleX(1);
+}
+
+.navbar-toggler {
+  font-size: 0.9rem;
+  color: #FF0000;
+  border: transparent;
+}
+
+.w-100 {
+  margin: 10px 0;
+}
+
+.burger-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  display: block;
+}
+
+.navbar-toggler {
+  padding: 0.25rem 0.5rem;
+  border: none;
+  background: transparent;
+  color: red;
+}
+
+/* ACTIVE + SHOW → texto rojo siempre */
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link.show {
+  color: #FF0000 !important;
+}
+
+/* TODOS los estados (clicked, focus, visited) mantienen rojo */
+.navBar .link,
+.navBar .link:visited,
+.navBar .link:focus,
+.navBar .link:active {
+  color: #FF0000 !important;
+}
+
+
+/* ============================
+  MEDIA QUERIES
+============================ */
+
+@media (min-width: 768px) {
+  .navBar {
+      padding: 0.4rem 1rem 0.7rem !important;
+  }
+
+  .navBar .logo {
+      height: 4vh !important;
+      padding-left: 2rem !important;
+      margin-top: 0rem !important;
+  }
+}
+
+@media (min-width: 1024px) {
+  .navBar {
+      padding: 15px 0 18px !important;
+      display: flex;
+      justify-content: space-between;
+  }
+
+  .navBar .logo {
+      width: 10vw;
+  }
+
+  .navBar .link {
+      padding: 3px 10px;
+      border-right: 1px solid #FF0000;
+  }
+
+  .navBar .link:last-child {
+      border-right: none;
+  }
+
+  .navBar .navbar-collapse {
+      justify-content: flex-end;
+  }
+}
+
+@media (min-width: 1440px) {
+  .navBar .logo {
+      width: 5.5vw;
+  }
+}

@@ -1,0 +1,120 @@
+/* 💥 MOBILE — Oculto */
+.serviciosDesktop {
+  display: none;
+}
+
+/* 💻 DESKTOP desde 1024px */
+@media (min-width: 1024px) {
+
+  .serviciosDesktop {
+    display: block;
+    padding: 0;
+    overflow: hidden;
+  }
+
+  .serviciosDesktop .containerCards {
+    width: 100vw;
+    margin: 0 auto;
+    display: flex;
+  }
+
+  .serviciosDesktop .card {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    border-radius: 0;
+    width: 25vw;
+    aspect-ratio: 3 / 4;
+    border: none;
+  }
+
+  .serviciosDesktop .card .img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease, filter 0.3s ease;
+    border: none;
+    outline: none;
+  }
+
+  .serviciosDesktop .card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.25);
+    transition: background 0.3s ease;
+    z-index: 1;
+  }
+
+  /* ---------- TITULO ---------- */
+  .serviciosDesktop .card .titulo {
+    position: absolute;
+    top: 18%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #fff;
+    margin: 0;
+    padding: 0 12px;
+    font-size: 1.6rem;
+    font-weight: 700;
+    text-align: center;
+    z-index: 2;
+    transition: opacity 0.3s ease;
+  }
+
+  /* ---------- TEXTO centrado verticalmente ---------- */
+  .serviciosDesktop .card .texto {
+    position: absolute;
+    top: 50%;                  
+    left: 50%;
+    transform: translate(-50%, -50%) translateY(10px);
+    width: 85%;
+    margin: 0;
+    font-size: 1.05rem;
+    text-align: center;
+    line-height: 1.4;
+    color: #fff;
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    z-index: 2;
+  }
+
+  /* ---------- HOVER GENERAL ---------- */
+  .serviciosDesktop .card:hover::before,
+  .serviciosDesktop .card:focus-within::before {
+    background: rgba(0, 0, 0, 0.45);
+  }
+
+  .serviciosDesktop .card:hover .img,
+  .serviciosDesktop .card:focus-within .img {
+    transform: scale(1.05);
+  }
+
+  /* 💥 AHORA DESDE 1024px EN ADELANTE:
+         El título SIEMPRE desaparece en hover */
+  .serviciosDesktop .card:hover .titulo,
+  .serviciosDesktop .card:focus-within .titulo {
+    opacity: 0;
+  }
+
+  /* Y aparece el texto centrado */
+  .serviciosDesktop .card:hover .texto,
+  .serviciosDesktop .card:focus-within .texto {
+    opacity: 1;
+    transform: translate(-50%, -50%) translateY(0);
+  }
+}
+
+
+/* 🖥️ 1440px+ — Ajustes de tamaños, pero mismo comportamiento */
+@media (min-width: 1440px) {
+
+  .serviciosDesktop .card .titulo {
+    font-size: 1.9rem;
+  }
+
+  .serviciosDesktop .card .texto {
+    font-size: 1.2rem;
+  }
+}

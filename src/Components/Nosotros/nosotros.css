@@ -1,8 +1,106 @@
 .nosotros .titulo{
     text-align: center;
+    font-size: 5vh;
+    margin-bottom: 2rem;
 }
 
 .nosotros {
-    background-color: green;
+    background-color: black;
     color: white;
+    padding: 2rem;
+}
+
+.nosotros .texto{
+    font-size: 2.25vh;
+}
+
+.nosotros .texto .strong{
+    font-size: 1.5rem;
+}
+
+.nosotros .cards .card{
+    padding: 1.5rem 1rem 2rem;
+    margin: 2rem 1rem;
+}
+
+.nosotros .cards .card .containerTitulo{
+    display: flex;
+}
+
+.nosotros .cards .card .containerTitulo .img{
+    width: 50px;
+    height: 50px;
+    margin-top: -0.75rem;
+    margin-right: 0.85rem;
+}
+
+.nosotros .cards .card .titulo{
+    color: #FF0000;
+    font-size: 3vh;
+    margin-bottom: 1rem;
+}
+
+.nosotros .cards .card .texto{
+    margin: 0;
+    padding-top: 0.75rem;
+}
+
+@media (min-width: 768px){
+    .nosotros{
+        padding: 10vw 10vw 7vw;
+    }
+
+    .nosotros .cards{
+margin-top: 3rem;
+margin-bottom: 1rem;
+    }
+
+    .nosotros .cards .card{
+        padding: 3rem 2rem 3rem;
+        margin: 2rem 8rem;
+    }
+
+    .nosotros .cards .card .titulo{
+        font-size: 2.5vh;
+        margin-bottom: 1rem;
+    }
+}
+
+@media (min-width: 1024px){
+    .nosotros{
+        padding: 8vh 8vw;
+    }
+
+    .nosotros .cards{
+        display: flex;
+        padding: 0;
+    }
+
+    .nosotros .cards .card .containerTitulo .img{
+        width: 40px;
+        height: 40px;
+    }
+
+    .nosotros .cards .card{
+        padding: 3rem 2rem 3rem;
+        margin: 2rem 1rem;
+        width: 35vw;
+    }
+
+@media (min-width: 1440px){
+
+    .nosotros .cards .card{
+        padding: 3rem 2rem 3rem;
+        margin: 2rem;
+        width: 24vw;
+    } 
+
+    .nosotros .cards .card .titulo{
+        font-size: 3.5vh;
+        margin-bottom: 1rem;
+    }
+}    
+
+    
+
 }

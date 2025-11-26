@@ -1,0 +1,104 @@
+.contacto{
+    background-color: #fff;
+    padding: 2rem;
+}
+
+.contacto .titulo{
+    font-size: 5vh;
+    margin-bottom: 0.8rem;
+    color: #FF0000;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.contacto .texto{
+    color: black;
+    padding-bottom: 2rem;
+    text-align: justify;
+}
+
+.contacto .texto:last-child{
+    margin-top: -2.5rem;
+    padding-bottom: 1rem;
+}
+
+.contacto .box{
+    margin-left: -1.5vw;
+}
+
+.contacto .boton{
+    display: flex;
+    margin: 1.5rem auto;
+    background-color: #FF0000;
+    color: white;
+    font-size: 0.9rem;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+.contacto .boton:hover{
+    color: white;
+    font-weight: 600;
+}
+
+.containerIMG{
+    display: none;
+}
+
+
+.css-1d3z3hw-MuiOutlinedInput-notchedOutline{
+    border-bottom: 4px solid #FF0000 !important;
+    border-right: 4px solid #FF0000 !important;
+    border-top: 4px solid #FF0000 !important;;
+}
+
+/* .contacto .swal2-close {
+    background-color: #efca16 !important;
+    border-color: #efca16 !important;
+    color: #000 !important;
+}
+
+.contacto .swal2-close:hover {
+    background-color: #efca16 !important;
+    border-color: #3F608F !important;
+} */
+
+
+/* div:where(.swal2-container) button:where(.swal2-styled):where(.swal2-confirm){
+    background-color: #FF0000;
+} */
+
+.contacto .negrita{
+    color: red;
+    font-weight: 700;
+}
+
+@media(min-width: 768px){
+    .contacto{
+        padding: 8vh 10vw;
+    }
+}
+
+@media(min-width: 1024px){
+    .contacto{
+        display: flex;
+        justify-content: space-between;
+        padding: 8vh 10vw;
+        padding-bottom: 6vh;
+    }
+
+    .contacto .containerTexto{
+        width: 35vw;
+    }
+
+    .contacto .containerBox{
+        width: 35vw;
+    }
+
+    .contacto .titulo{
+        font-size: 6vh;
+    }
+
+    .contacto .texto{
+        font-size: 1.25rem;
+    }
+}

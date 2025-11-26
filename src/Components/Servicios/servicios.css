@@ -1,0 +1,185 @@
+.servicios {
+  background-color: white;
+}
+
+/* ===== CONTENEDOR ===== */
+.servicios .mc-container {
+  position: relative;
+  width: 100vw;   /* ocupa todo el ancho del viewport */
+  height: 100vh;  /* ocupa todo el alto del viewport */
+  margin: 0;
+  overflow: hidden;
+  border-radius: 0;
+}
+
+/* ===== TRACK ===== */
+.servicios .mc-track {
+  display: flex;
+  transition: transform 0.35s ease;
+}
+
+/* ===== SLIDE ===== */
+.servicios .mc-slide {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+/* ===== IMAGEN ===== */
+.servicios .mc-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+  border-radius: 0;
+}
+
+/* ===== OVERLAY (Título + texto) ===== */
+.servicios .mc-overlay {
+  position: absolute;
+  inset: 0;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.6),
+    transparent 40%
+  );
+  color: white;
+  pointer-events: none;
+}
+
+/* ===== TÍTULO ===== */
+.servicios .mc-title {
+  margin: 0;
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-top: 20%;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 0.75rem;
+}
+
+/* ===== TEXTO ===== */
+.servicios .mc-text {
+  margin: 12px 0 0;
+  font-size: 1rem;
+
+  max-height: 0;
+  opacity: 0;
+  transform: translateY(8px);
+  overflow: hidden;
+  padding: 1rem 2rem;
+
+  transition:
+    max-height 0.25s ease,
+    opacity 0.25s ease,
+    transform 0.25s ease;
+}
+
+.servicios .mc-overlay.mc-overlay--active .mc-text {
+  max-height: 60vh;
+  opacity: 1;
+  transform: translateY(0);
+  overflow-y: auto;
+}
+
+.servicios .mc-overlay.mc-overlay--active {
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.75),
+    rgba(0, 0, 0, 0.4),
+    transparent 90%
+  );
+}
+
+/* ===== FLECHAS ===== */
+.servicios .mc-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  background: rgba(0, 0, 0, 0.4);
+  color: #fff;
+  width: 32px;
+  height: 32px;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  cursor: pointer;
+  z-index: 5;
+}
+
+.servicios .mc-arrow--left {
+  left: 8px;
+}
+
+.servicios .mc-arrow--right {
+  right: 8px;
+}
+
+.servicios .mc-arrow:active {
+  transform: translateY(-50%) scale(0.96);
+}
+
+/* ===== DOTS ===== */
+.servicios .mc-dots {
+  display: none;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 0 4px;
+}
+
+.servicios .mc-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  border: none;
+  background: #ccc;
+  cursor: pointer;
+}
+
+.servicios .mc-dot--active {
+  width: 18px;
+  background: #000;
+}
+
+/* ===== RESPONSIVE 768–1023px ===== */
+@media (min-width: 768px) and (max-width: 1023px) {
+
+  .servicios .mc-title {
+    font-size: 2.4rem;
+    margin-top: 15%;
+  }
+
+  .servicios .mc-text {
+    font-size: 1.2rem;
+    padding: 2rem 3rem;
+  }
+
+  .servicios .mc-arrow {
+    width: 42px;
+    height: 42px;
+    font-size: 1.8rem;
+  }
+
+  .servicios .mc-dots {
+    display: flex;
+  }
+
+}
+
+/* ===== OCULTAR EN DESKTOP ===== */
+@media (min-width: 1024px) {
+  .servicios {
+    display: none;
+  }
+}
