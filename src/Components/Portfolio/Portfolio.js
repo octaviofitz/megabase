@@ -1,7 +1,7 @@
 import React from 'react';
 
-import patagonia from '../../IMG/Index/Proyectos/patagonia.jpg';
-import alamo from '../../IMG/Index/Proyectos/alamo.jpg';
+import patagonia from '../../IMG/Index/Proyectos/patagonia.webp';
+import alamo from '../../IMG/Index/Proyectos/alamo.webp';
 
 import './portfolio.css';
 
