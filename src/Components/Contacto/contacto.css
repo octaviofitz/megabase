@@ -67,6 +67,10 @@
     background-color: #FF0000;
 } */
 
+div:where(.swal2-container) button:where(.swal2-styled):where(.swal2-confirm) {
+    background-color: red!important;
+}
+
 .contacto .negrita{
     color: red;
     font-weight: 700;
