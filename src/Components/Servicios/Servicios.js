@@ -35,18 +35,12 @@ const slides = [
 ];
 
 function Servicios() {
-
   const [current, setCurrent] = useState(0);
-  const [revealed, setRevealed] = useState(null);
 
-  // ⏱ AUTOPLAY CADA 4 SEGUNDOS
+  // AUTOPLAY
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrent(prev => {
-        const next = prev === slides.length - 1 ? 0 : prev + 1;
-        return next;
-      });
-      setRevealed(null); // siempre ocultar texto al cambiar
+      setCurrent(prev => (prev === slides.length - 1 ? 0 : prev + 1));
     }, 10000);
 
     return () => clearInterval(interval);
@@ -54,16 +48,10 @@ function Servicios() {
 
   const handlePrev = () => {
     setCurrent(prev => (prev === 0 ? slides.length - 1 : prev - 1));
-    setRevealed(null);
   };
 
   const handleNext = () => {
     setCurrent(prev => (prev === slides.length - 1 ? 0 : prev + 1));
-    setRevealed(null);
-  };
-
-  const handleSlideClick = (index) => {
-    setRevealed(prev => (prev === index ? null : index));
   };
 
   return (
@@ -73,23 +61,16 @@ function Servicios() {
         className="mc-track"
         style={{ transform: `translateX(-${current * 100}%)` }}
       >
-        {slides.map((slide, index) => (
-          <div
-            key={slide.id}
-            className="mc-slide"
-            onClick={() => handleSlideClick(index)}
-          >
+        {slides.map((slide) => (
+          <div key={slide.id} className="mc-slide">
             <img
               src={slide.image}
               alt={slide.title}
               className="mc-image"
             />
 
-            <div
-              className={
-                "mc-overlay" + (index === revealed ? " mc-overlay--active" : "")
-              }
-            >
+            {/* Siempre visible */}
+            <div className="mc-overlay">
               <h3 className="mc-title">{slide.title}</h3>
               <p className="mc-text">{slide.text}</p>
             </div>
@@ -102,6 +83,7 @@ function Servicios() {
         className="mc-arrow mc-arrow--left"
         onClick={handlePrev}
         aria-label="Anterior"
+        type="button"
       >
         ‹
       </button>
@@ -110,6 +92,7 @@ function Servicios() {
         className="mc-arrow mc-arrow--right"
         onClick={handleNext}
         aria-label="Siguiente"
+        type="button"
       >
         ›
       </button>
@@ -120,11 +103,9 @@ function Servicios() {
           <button
             key={index}
             className={"mc-dot" + (index === current ? " mc-dot--active" : "")}
-            onClick={() => { 
-              setCurrent(index); 
-              setRevealed(null); 
-            }}
+            onClick={() => setCurrent(index)}
             aria-label={`Ver imagen ${index + 1}`}
+            type="button"
           />
         ))}
       </div>
