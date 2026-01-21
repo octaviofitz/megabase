@@ -77,7 +77,7 @@ function Contacto() {
         'service_7n0jgza',
         'template_0hgb95f',
         e.target,
-        'kz8O1GRcQCd6E21vjV'
+        '-ldtu1SG8fWB3AJ1j'
       )
       .then((response) => {
         console.log('Estado:', response.status);
@@ -139,14 +139,11 @@ function Contacto() {
           <div>
             <h4 className="titulo">Contacto</h4>
             <p className="texto">
-              En Megasteel, estamos aquí para ayudarte. Si tienes alguna
-              consulta o necesitas más información sobre nuestros servicios,
-              no dudes en completar el formulario. Nuestro equipo se pondrá
-              en contacto contigo lo antes posible.
+            En Megabass te acompañamos en cada etapa de tu proyecto. Si tenés alguna consulta o querés contarnos tu idea para desarrollarla juntos, te invitamos a completar el formulario. Nuestro equipo se pondrá en contacto con vos a la brevedad.
             </p>
             <p className="texto">
-              También podés contactarnos directamente a nuestro correo:{' '}
-              <b className="negrita">info@megasteel.com.ar</b>
+            También podés escribirnos directamente a nuestro correo: {' '}
+              <b className="negrita">info@megabass.com.ar</b>
             </p>
           </div>
         </div>
